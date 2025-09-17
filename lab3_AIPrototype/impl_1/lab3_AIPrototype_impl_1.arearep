@@ -1,0 +1,40 @@
+----------------------------------------------------------------------
+Report for cell keypad_display_top.TECH
+Register bits:  60 of 5280 (1.136%)
+I/O cells:      19
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        17          100.0
+                            FD1P3XZ        60          100.0
+                                 IB         6          100.0
+                               LUT4        31          100.0
+                                 OB        13          100.0
+SUB MODULES
+                      clock_divider         1
+                 display_controller         1
+                     keypad_scanner         1
+                              TOTAL       130
+----------------------------------------------------------------------
+Report for cell keypad_scanner.v1
+Instance Path : scanner
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        19           31.7
+                               LUT4        17           54.8
+                              TOTAL        36
+----------------------------------------------------------------------
+Report for cell clock_divider.v1
+Instance Path : clk_div
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        17          100.0
+                            FD1P3XZ        31           51.7
+                              TOTAL        48
+----------------------------------------------------------------------
+Report for cell display_controller.v1
+Instance Path : display
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        10           16.7
+                               LUT4        14           45.2
+                              TOTAL        24

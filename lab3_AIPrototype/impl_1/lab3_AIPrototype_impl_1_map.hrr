@@ -1,0 +1,39 @@
+---------------------------------------------------
+Report for cell keypad_display_top
+   Instance path: keypad_display_top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         86        100.0
+                               LUTGATE	         52        100.0
+                                LUTCCU	         34        100.0
+                                 IOBUF	         19        100.0
+                                PFUREG	         60        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                         clock_divider	          1        39.5
+                    display_controller	          1        16.3
+                        keypad_scanner	          1        18.6
+---------------------------------------------------
+Report for cell keypad_scanner
+   Instance path: keypad_display_top/scanner
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         16        18.6
+                               LUTGATE	         16        30.8
+                                PFUREG	         19        31.7
+---------------------------------------------------
+Report for cell clock_divider
+   Instance path: keypad_display_top/clk_div
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         34        39.5
+                                LUTCCU	         34        100.0
+                                PFUREG	         31        51.7
+---------------------------------------------------
+Report for cell display_controller
+   Instance path: keypad_display_top/display
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         14        16.3
+                               LUTGATE	         14        26.9
+                                PFUREG	         10        16.7

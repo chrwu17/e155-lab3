@@ -1,0 +1,40 @@
+---------------------------------------------------
+Report for cell keypad_top
+   Instance path: keypad_top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        154        100.0
+                               LUTGATE	        116        100.0
+                                LUTCCU	         38        100.0
+                                 IOBUF	         17        100.0
+                                PFUREG	         79        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                keypad_oneshot_default	          1        18.8
+                keypad_scanner_default	          1        44.2
+                          sevenSegment	          1         4.5
+---------------------------------------------------
+Report for cell sevenSegment
+   Instance path: keypad_top/u_seven_seg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         4.5
+                               LUTGATE	          7         6.0
+---------------------------------------------------
+Report for cell keypad_scanner_default
+   Instance path: keypad_top/u_scanner
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         68        44.2
+                               LUTGATE	         54        46.6
+                                LUTCCU	         14        36.8
+                                PFUREG	         26        32.9
+---------------------------------------------------
+Report for cell keypad_oneshot_default
+   Instance path: keypad_top/u_oneshot
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         29        18.8
+                               LUTGATE	         19        16.4
+                                LUTCCU	         10        26.3
+                                PFUREG	         17        21.5

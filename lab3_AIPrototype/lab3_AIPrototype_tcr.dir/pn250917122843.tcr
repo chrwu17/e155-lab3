@@ -1,0 +1,10 @@
+#Start recording tcl command: 9/17/2025 12:21:32
+#Project Location: C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_AIPrototype; Project name: lab3_AIPrototype
+prj_create -name "lab3_AIPrototype" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_AIPrototype/source/impl_1/keypad_display_top.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_save 
+prj_close
+#Stop recording: 9/17/2025 12:28:43
