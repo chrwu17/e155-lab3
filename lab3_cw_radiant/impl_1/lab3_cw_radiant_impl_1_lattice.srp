@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Sep 16 18:02:40 2025
+Tue Sep 16 23:52:30 2025
 
 
 Command Line:  C:\lscc\radiant\2025.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/impl_1/lab3_cw_radiant_impl_1_lattice.synproj -logfile lab3_cw_radiant_impl_1_lattice.srp -gui -msgset C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/promote.xml 
@@ -194,14 +194,13 @@ INFO <35921014> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.vhd(4): a
 INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/impl_1". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): lab3_cw
-INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/lab3_cw.sv(9): compiling module lab3_cw. VERI-1018
+INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/lab3_cw.sv(8): compiling module lab3_cw. VERI-1018
 INFO <35901018> - synthesis: C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC. VERI-1018
 INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/synchronizer.sv(8): compiling module synchronizer. VERI-1018
-INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(8): compiling module keypadFSM. VERI-1018
-WARNING <35901209> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(59): expression size 32 truncated to fit in target size 19. VERI-1209
-WARNING <35901209> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(87): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING <35901330> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/lab3_cw.sv(38): actual bit length 25 differs from formal bit length 8 for port counter. VERI-1330
-INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypad.sv(10): compiling module keypad. VERI-1018
+INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(12): compiling module keypadFSM. VERI-1018
+WARNING <35901209> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(58): expression size 32 truncated to fit in target size 19. VERI-1209
+WARNING <35901209> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(85): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypad.sv(9): compiling module keypad. VERI-1018
 INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/sevensegdigits.sv(9): compiling module sevenSegDigits. VERI-1018
 INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/timemultiplexer.sv(10): compiling module timeMultiplexer. VERI-1018
 WARNING <35901209> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/timemultiplexer.sv(26): expression size 32 truncated to fit in target size 25. VERI-1209
@@ -302,10 +301,10 @@ Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : resetInv_c_N_115, loads : 59
   Net : timeMux/n49, loads : 36
-  Net : fsm/n596, loads : 33
-  Net : n1058, loads : 23
-  Net : n1050, loads : 21
-  Net : fsm/n598, loads : 20
+  Net : fsm/n588, loads : 33
+  Net : n1050, loads : 23
+  Net : n1042, loads : 21
+  Net : fsm/n590, loads : 20
   Net : resetInv_c, loads : 19
   Net : fsm/fsm_tick, loads : 19
   Net : fsm/n129[0], loads : 18
@@ -322,6 +321,6 @@ Peak Memory Usage: 97 MB
 
 --------------------------------------------------------------
 Total CPU Time: 5 secs 
-Total REAL Time: 6 secs 
+Total REAL Time: 7 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 8c073b07aa1b967ec2d02b6278a6fc3153a54f75
+Checksum -- synthesis -- netlist: 8e507599ac25b4c8b59cc671d284a116dccc17a

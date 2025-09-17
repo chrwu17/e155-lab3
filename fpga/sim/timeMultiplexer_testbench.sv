@@ -1,103 +1,52 @@
 // Christian Wu
 // chrwu@g.hmc.edu
-// 09/13/25
+// 09/08/25
 
-// Simple testbench for synchronizer module using only stimulus and assert
+// This module tests the timeMultiplexer module by simulating clock cycles and checking if the an1, an2, and signal outputs
+// toggle correctly based on the internal counter.
 
-`timescale 1ns/1ps
+// timeMultiplexer_simple_tb.sv
+// Simple testbench focusing only on an1 and an2 switching behavior
 
-module synchronizer_testbench();
-    
-    // Testbench signals
+`timescale 1ns / 1ps
+
+module timeMultiplexer_testbench();
     logic clk;
-    logic [3:0] in;
-    logic [3:0] out;
+    logic reset;
+    logic an1, an2;
+    logic signal;
     
-    // Instantiate the synchronizer
-    synchronizer dut (
-        .clk(clk),
-        .in(in),
-        .out(out)
-    );
+    timeMultiplexer dut (.clk(clk), .reset(reset), .an1(an1), .an2(an2), .signal(signal));
     
-    // Clock generation - 10ns period
     initial begin
         clk = 0;
-        forever #5 clk = ~clk;
+        forever #5 clk = ~clk; 
     end
     
-    // Main test sequence
+    // Test sequence
     initial begin
-        $display("Starting simple synchronizer testbench...");
+        repeat(10) begin
+            @(posedge signal or negedge signal);
+            #1;
+        end
         
-        // Initialize
-        in = 4'b0000;
-        repeat(3) @(posedge clk);
-        
-        // Test 1: Change input to 4'b0001
-        in = 4'b0001;
-        @(posedge clk); #1;
-        assert(out != 4'b0001) else $error("Output changed too early!");
-        @(posedge clk); #1;
-        assert(out == 4'b0001) else $error("Test 1 failed: expected 4'b0001, got %b", out);
-        
-        // Test 2: Change input to 4'b1010
-        in = 4'b1010;
-        @(posedge clk); #1;
-        assert(out == 4'b0001) else $error("Output changed too early!");
-        @(posedge clk); #1;
-        assert(out == 4'b1010) else $error("Test 2 failed: expected 4'b1010, got %b", out);
-        
-        // Test 3: Change input to 4'b1111
-        in = 4'b1111;
-        @(posedge clk); #1;
-        assert(out == 4'b1010) else $error("Output changed too early!");
-        @(posedge clk); #1;
-        assert(out == 4'b1111) else $error("Test 3 failed: expected 4'b1111, got %b", out);
-        
-        // Test 4: Change input to 4'b0000
-        in = 4'b0000;
-        @(posedge clk); #1;
-        assert(out == 4'b1111) else $error("Output changed too early!");
-        @(posedge clk); #1;
-        assert(out == 4'b0000) else $error("Test 4 failed: expected 4'b0000, got %b", out);
-        
-        // Test 5: Change input to 4'b0101
-        in = 4'b0101;
-        @(posedge clk); #1;
-        assert(out == 4'b0000) else $error("Output changed too early!");
-        @(posedge clk); #1;
-        assert(out == 4'b0101) else $error("Test 5 failed: expected 4'b0101, got %b", out);
-        
-        // Test 6: Change input to 4'b1100
-        in = 4'b1100;
-        @(posedge clk); #1;
-        assert(out == 4'b0101) else $error("Output changed too early!");
-        @(posedge clk); #1;
-        assert(out == 4'b1100) else $error("Test 6 failed: expected 4'b1100, got %b", out);
-        
-        // Test 7: Rapid changes (should only see final value)
-        in = 4'b0001;
-        in = 4'b0010;
-        in = 4'b0100;
-        in = 4'b1000;
-        @(posedge clk); #1;
-        assert(out == 4'b1100) else $error("Output changed too early after rapid changes!");
-        @(posedge clk); #1;
-        // Don't assert specific value here since rapid changes are unpredictable
-        
-        // Test 8: Verify stability
-        in = 4'b0110;
-        @(posedge clk); #1;
-        @(posedge clk); #1;
-        assert(out == 4'b0110) else $error("Test 8 failed: expected 4'b0110, got %b", out);
-        @(posedge clk); #1;
-        assert(out == 4'b0110) else $error("Output not stable!");
-        @(posedge clk); #1;
-        assert(out == 4'b0110) else $error("Output not stable!");
-        
-        $display("All synchronizer tests passed!");
-        $finish;
+        $display("Test completed successfully.");
+        $stop;
     end
-
+    
+    // Assert statements for anode behavior
+    always @(*) begin
+        // Assert anodes are always opposite (mutually exclusive)
+        assert (an1 !== an2)
+        else $error("Anodes not mutually exclusive: an1=%b, an2=%b", an1, an2);
+        
+        // Assert correct anode control based on signal
+        assert (signal ? (an1 == 1 && an2 == 0) : (an1 == 0 && an2 == 1))
+        else $error("Incorrect anode control: signal=%b, an1=%b, an2=%b", signal, an1, an2);
+        
+        // Assert only one display is active at a time (one anode is 0)
+        assert ((an1 == 0) ^ (an2 == 0))
+        else $error("Neither or both displays active: an1=%b, an2=%b", an1, an2);
+    end
+    
 endmodule

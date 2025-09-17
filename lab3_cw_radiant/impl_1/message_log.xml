@@ -373,10 +373,10 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/lab3_cw.sv(9): </Dynamic>
+            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/lab3_cw.sv(8): </Dynamic>
             <Dynamic>lab3_cw</Dynamic>
             <Navigation>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/lab3_cw.sv</Navigation>
-            <Navigation>9</Navigation>
+            <Navigation>8</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -397,46 +397,36 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(8): </Dynamic>
+            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(12): </Dynamic>
             <Dynamic>keypadFSM</Dynamic>
             <Navigation>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv</Navigation>
-            <Navigation>8</Navigation>
+            <Navigation>12</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(59): </Dynamic>
+            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(58): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>19</Dynamic>
             <Navigation>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv</Navigation>
-            <Navigation>59</Navigation>
+            <Navigation>58</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(87): </Dynamic>
+            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(85): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv</Navigation>
-            <Navigation>87</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/lab3_cw.sv(38): </Dynamic>
-            <Dynamic>25</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>counter</Dynamic>
-            <Navigation>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/lab3_cw.sv</Navigation>
-            <Navigation>38</Navigation>
+            <Navigation>85</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypad.sv(10): </Dynamic>
+            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypad.sv(9): </Dynamic>
             <Dynamic>keypad</Dynamic>
             <Navigation>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypad.sv</Navigation>
-            <Navigation>10</Navigation>
+            <Navigation>9</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>

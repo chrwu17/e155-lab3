@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1758070999">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1758070999"/>
+        <Milestone name="Export" build_result="2" build_time="1758091987">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1758091987"/>
             <Task name="IBIS" build_result="0" update_result="2" update_time="1757826329"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1757826329"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1758070974">
-            <Task name="Map" build_result="2" update_result="0" update_time="1758070974"/>
+        <Milestone name="Map" build_result="2" build_time="1758091962">
+            <Task name="Map" build_result="2" update_result="0" update_time="1758091962"/>
             <Task name="MapTrace" build_result="0" update_result="2" update_time="1757826794"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1758070992">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1758070992"/>
+        <Milestone name="PAR" build_result="2" build_time="1758091980">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1758091980"/>
             <Task name="PostParVM" build_result="0" update_result="2" update_time="1757826329"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1758070994"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1758091982"/>
             <Task name="IOTiming" build_result="0" update_result="2" update_time="1757826329"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1758070967">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1758070967"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1758070994"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1758091957">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1758091957"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1758091982"/>
             <Task name="LSE_Lint" build_result="0" update_result="2" update_time="1757912439"/>
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1757912439"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1757912439"/>
@@ -30,13 +30,14 @@
             <Task name="PIODRC" build_result="0" update_result="2" update_time="1757826329"/>
             <Task name="DEC" build_result="0" update_result="2" update_time="1757826329"/>
         </Milestone>
-        <Report name="lab3_cw_radiant_impl_1.bgn" last_build_time="1758070999" last_build_size="1310"/>
-        <Report name="lab3_cw_radiant_impl_1.bin" last_build_time="1758070999" last_build_size="104156"/>
+        <Report name="lab3_cw_radiant_impl_1.bgn" last_build_time="1758091987" last_build_size="1310"/>
+        <Report name="lab3_cw_radiant_impl_1.bin" last_build_time="1758091987" last_build_size="104156"/>
         <Report name="lab3_cw_radiant_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
-        <Report name="lab3_cw_radiant_impl_1.twr.html" last_build_time="1758070994" last_build_size="205561"/>
-        <Report name="lab3_cw_radiant_impl_1.udb" last_build_time="1758070992" last_build_size="36781"/>
-        <Report name="lab3_cw_radiant_impl_1_map.udb" last_build_time="1758070974" last_build_size="22364"/>
-        <Report name="lab3_cw_radiant_impl_1_rtl.udb" last_build_time="1758070966" last_build_size="13141"/>
-        <Report name="lab3_cw_radiant_impl_1_syn.udb" last_build_time="1758070967" last_build_size="14919"/>
+        <Report name="lab3_cw_radiant_impl_1.twr.html" last_build_time="1758091982" last_build_size="205513"/>
+        <Report name="lab3_cw_radiant_impl_1.udb" last_build_time="1758091980" last_build_size="36709"/>
+        <Report name="lab3_cw_radiant_impl_1_map.udb" last_build_time="1758091962" last_build_size="22390"/>
+        <Report name="lab3_cw_radiant_impl_1_rtl.udb" last_build_time="1758091956" last_build_size="12590"/>
+        <Report name="lab3_cw_radiant_impl_1_syn.udb" last_build_time="1758091957" last_build_size="14895"/>
     </Strategy>
 </BuildStatus>
+   

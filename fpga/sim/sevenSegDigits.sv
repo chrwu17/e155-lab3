@@ -11,10 +11,8 @@ module sevenSegDigits (
     input  logic reset,
     input  logic en,
     input  logic [3:0] key,
-    input  logic [24:0] bounceCounter,  // Added debounce counter input
-    output logic [3:0] s1, // Left digit
-    output logic [3:0] s2  // Right digit
-);
+    output logic [3:0] s1,
+    output logic [3:0] s2);
 
     logic en_prev;
     logic en_edge;

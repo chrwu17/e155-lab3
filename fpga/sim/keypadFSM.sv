@@ -15,9 +15,8 @@ module keypadFSM (
     input  logic [3:0] col,
     output logic [3:0] row,
     output logic [7:0] rc,
-    output logic en, 
-    output logic [7:0] counter
-);
+    output logic en);
+
     typedef enum logic [3:0] {
         S0,       // Row0 scan
         S1,       // Row1 scan
@@ -39,7 +38,7 @@ module keypadFSM (
     logic [3:0] rowPressed;
     logic [3:0] originalButton; 
     logic originalStillPressed; 
-
+    logic [7:0] counter;
     logic [18:0] fsm_counter;
     logic fsm_tick;
 
@@ -124,10 +123,8 @@ module keypadFSM (
                 (nextState == S11 && state == S10)
               );
 
-    // FSM combinational - FIXED: Removed oneButtonPressed check from debounce states
     always_comb begin
-        unique case (state)
-            // Row scanning states
+        case (state)
             S0:  nextState = buttonPressed && oneButtonPressed ? S4 : S1;
             S1:  nextState = buttonPressed && oneButtonPressed ? S6 : S2;
             S2:  nextState = buttonPressed && oneButtonPressed ? S8 : S3;

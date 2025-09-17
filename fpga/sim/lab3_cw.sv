@@ -12,29 +12,23 @@ module lab3_cw (
     output logic [6:0] seg,
     output logic an1, an2);
 
-    logic clk;          // Main clock (48 MHz)
-    logic reset;        // Proper reset signal
-    
-    // Clock generation - 48 MHz internal oscillator
-    HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
-    
-    assign reset = ~resetInv;
-
-    // Internal signals
+    logic clk;         
+    logic reset;
     logic [7:0] rc;
     logic [3:0] col_sync;
     logic [3:0] key;
     logic en;
-    logic [3:0] s1, s2; // Digits to display
+    logic [3:0] s1, s2;
     logic signal;
-    logic [3:0] current_seg;
-    logic [24:0] bounceCounter;
-
-    // Module instantiations - All use same clock and combined reset
+    logic [3:0] current_seg;       
+    
+    assign reset = ~resetInv;
+    
+    HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
     synchronizer sync (.clk(clk), .reset(reset), .in(col), .out(col_sync));
-    keypadFSM fsm (.clk(clk), .reset(reset), .col(col_sync), .row(row), .rc(rc), .en(en), .counter(bounceCounter));
+    keypadFSM fsm (.clk(clk), .reset(reset), .col(col_sync), .row(row), .rc(rc), .en(en));
     keypad keypad_decode (.row(rc[7:4]), .col(rc[3:0]), .key(key));
-    sevenSegDigits digits (.clk(clk), .reset(reset), .en(en), .key(key), .bounceCounter(bounceCounter), .s1(s1), .s2(s2));
+    sevenSegDigits digits (.clk(clk), .reset(reset), .en(en), .key(key), .s1(s1), .s2(s2));
     timeMultiplexer timeMux (.clk(clk), .reset(reset), .an1(an1), .an2(an2), .signal(signal));
     sevenSegMux segMux (.s1(s1), .s2(s2), .enable(signal), .out(current_seg));
     sevenSegmentDisplay segDisplay (.s(current_seg), .seg(seg));

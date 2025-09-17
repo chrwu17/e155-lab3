@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2025.1.0.39.0
 
-Tue Sep 16 18:03:13 2025
+Tue Sep 16 23:53:02 2025
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -217,7 +217,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : fsm/counter__i5/Q  (SLICE_R12C13C)
+Path Begin       : fsm/counter__i4/Q  (SLICE_R12C13C)
 Path End         : {digits/s1__i3/SP   digits/s1__i2/SP}  (SLICE_R16C7A)
 Source Clock     : clk (R)
 Destination Clock: clk (R)
@@ -233,15 +233,15 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  48      
 digits/clk                                                   NET DELAY           5.499                  5.499  48      
-{fsm/counter__i6/CK   fsm/counter__i5/CK}
+{fsm/counter__i5/CK   fsm/counter__i4/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-fsm/counter__i5/CK->fsm/counter__i5/Q     SLICE_R12C13C      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-fsm/bounceCounter[4]                                         NET DELAY           2.141                  9.028  2       
+fsm/counter__i4/CK->fsm/counter__i4/Q     SLICE_R12C13C      CLK_TO_Q1_DELAY     1.388                  6.887  2       
+fsm/counter[4]                                               NET DELAY           2.141                  9.028  2       
 fsm/i1_4_lut_adj_15/B->fsm/i1_4_lut_adj_15/Z
                                           SLICE_R13C13A      A0_TO_F0_DELAY      0.476                  9.504  1       
 fsm/n4_c                                                     NET DELAY           0.304                  9.808  1       
@@ -251,13 +251,13 @@ fsm/n387                                                     NET DELAY          
 fsm/i66_2_lut/B->fsm/i66_2_lut/Z          SLICE_R14C12A      D1_TO_F1_DELAY      0.449                 12.874  6       
 fsm/n401[0]                                                  NET DELAY           2.432                 15.306  6       
 fsm/i662_4_lut/B->fsm/i662_4_lut/Z        SLICE_R14C11B      C0_TO_F0_DELAY      0.449                 15.755  2       
-fsm/n808                                                     NET DELAY           2.168                 17.923  2       
+fsm/n800                                                     NET DELAY           2.168                 17.923  2       
 fsm/i1_4_lut/C->fsm/i1_4_lut/Z            SLICE_R14C12B      D1_TO_F1_DELAY      0.449                 18.372  2       
 fsm/n5                                                       NET DELAY           2.168                 20.540  2       
 fsm/i2_4_lut/A->fsm/i2_4_lut/Z            SLICE_R15C11B      D0_TO_F0_DELAY      0.476                 21.016  1       
 digits/en                                                    NET DELAY           0.304                 21.320  1       
 i899_3_lut/B->i899_3_lut/Z                SLICE_R15C11B      C1_TO_F1_DELAY      0.449                 21.769  4       
-digits/n1058                                                 NET DELAY           3.397                 25.166  4       
+digits/n1050                                                 NET DELAY           3.397                 25.166  4       
 {digits/s1__i3/SP   digits/s1__i2/SP}                        ENDPOINT            0.000                 25.166  1       
 
 
@@ -281,7 +281,7 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : fsm/counter__i5/Q  (SLICE_R12C13C)
+Path Begin       : fsm/counter__i4/Q  (SLICE_R12C13C)
 Path End         : {digits/s1__i0/SP   digits/s1__i1/SP}  (SLICE_R15C7A)
 Source Clock     : clk (R)
 Destination Clock: clk (R)
@@ -297,15 +297,15 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  48      
 digits/clk                                                   NET DELAY           5.499                  5.499  48      
-{fsm/counter__i6/CK   fsm/counter__i5/CK}
+{fsm/counter__i5/CK   fsm/counter__i4/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-fsm/counter__i5/CK->fsm/counter__i5/Q     SLICE_R12C13C      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-fsm/bounceCounter[4]                                         NET DELAY           2.141                  9.028  2       
+fsm/counter__i4/CK->fsm/counter__i4/Q     SLICE_R12C13C      CLK_TO_Q1_DELAY     1.388                  6.887  2       
+fsm/counter[4]                                               NET DELAY           2.141                  9.028  2       
 fsm/i1_4_lut_adj_15/B->fsm/i1_4_lut_adj_15/Z
                                           SLICE_R13C13A      A0_TO_F0_DELAY      0.476                  9.504  1       
 fsm/n4_c                                                     NET DELAY           0.304                  9.808  1       
@@ -315,13 +315,13 @@ fsm/n387                                                     NET DELAY          
 fsm/i66_2_lut/B->fsm/i66_2_lut/Z          SLICE_R14C12A      D1_TO_F1_DELAY      0.449                 12.874  6       
 fsm/n401[0]                                                  NET DELAY           2.432                 15.306  6       
 fsm/i662_4_lut/B->fsm/i662_4_lut/Z        SLICE_R14C11B      C0_TO_F0_DELAY      0.449                 15.755  2       
-fsm/n808                                                     NET DELAY           2.168                 17.923  2       
+fsm/n800                                                     NET DELAY           2.168                 17.923  2       
 fsm/i1_4_lut/C->fsm/i1_4_lut/Z            SLICE_R14C12B      D1_TO_F1_DELAY      0.449                 18.372  2       
 fsm/n5                                                       NET DELAY           2.168                 20.540  2       
 fsm/i2_4_lut/A->fsm/i2_4_lut/Z            SLICE_R15C11B      D0_TO_F0_DELAY      0.476                 21.016  1       
 digits/en                                                    NET DELAY           0.304                 21.320  1       
 i899_3_lut/B->i899_3_lut/Z                SLICE_R15C11B      C1_TO_F1_DELAY      0.449                 21.769  4       
-digits/n1058                                                 NET DELAY           3.397                 25.166  4       
+digits/n1050                                                 NET DELAY           3.397                 25.166  4       
 {digits/s1__i0/SP   digits/s1__i1/SP}                        ENDPOINT            0.000                 25.166  1       
 
 
@@ -345,7 +345,7 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : fsm/counter__i5/Q  (SLICE_R12C13C)
+Path Begin       : fsm/counter__i4/Q  (SLICE_R12C13C)
 Path End         : {digits/s2__i3/SP   digits/s2__i2/SP}  (SLICE_R15C8A)
 Source Clock     : clk (R)
 Destination Clock: clk (R)
@@ -361,15 +361,15 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  48      
 digits/clk                                                   NET DELAY           5.499                  5.499  48      
-{fsm/counter__i6/CK   fsm/counter__i5/CK}
+{fsm/counter__i5/CK   fsm/counter__i4/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-fsm/counter__i5/CK->fsm/counter__i5/Q     SLICE_R12C13C      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-fsm/bounceCounter[4]                                         NET DELAY           2.141                  9.028  2       
+fsm/counter__i4/CK->fsm/counter__i4/Q     SLICE_R12C13C      CLK_TO_Q1_DELAY     1.388                  6.887  2       
+fsm/counter[4]                                               NET DELAY           2.141                  9.028  2       
 fsm/i1_4_lut_adj_15/B->fsm/i1_4_lut_adj_15/Z
                                           SLICE_R13C13A      A0_TO_F0_DELAY      0.476                  9.504  1       
 fsm/n4_c                                                     NET DELAY           0.304                  9.808  1       
@@ -379,13 +379,13 @@ fsm/n387                                                     NET DELAY          
 fsm/i66_2_lut/B->fsm/i66_2_lut/Z          SLICE_R14C12A      D1_TO_F1_DELAY      0.449                 12.874  6       
 fsm/n401[0]                                                  NET DELAY           2.432                 15.306  6       
 fsm/i662_4_lut/B->fsm/i662_4_lut/Z        SLICE_R14C11B      C0_TO_F0_DELAY      0.449                 15.755  2       
-fsm/n808                                                     NET DELAY           2.168                 17.923  2       
+fsm/n800                                                     NET DELAY           2.168                 17.923  2       
 fsm/i1_4_lut/C->fsm/i1_4_lut/Z            SLICE_R14C12B      D1_TO_F1_DELAY      0.449                 18.372  2       
 fsm/n5                                                       NET DELAY           2.168                 20.540  2       
 fsm/i2_4_lut/A->fsm/i2_4_lut/Z            SLICE_R15C11B      D0_TO_F0_DELAY      0.476                 21.016  1       
 digits/en                                                    NET DELAY           0.304                 21.320  1       
 i899_3_lut/B->i899_3_lut/Z                SLICE_R15C11B      C1_TO_F1_DELAY      0.449                 21.769  4       
-digits/n1058                                                 NET DELAY           2.802                 24.571  4       
+digits/n1050                                                 NET DELAY           2.802                 24.571  4       
 {digits/s2__i3/SP   digits/s2__i2/SP}                        ENDPOINT            0.000                 24.571  1       
 
 
@@ -409,7 +409,7 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : fsm/counter__i5/Q  (SLICE_R12C13C)
+Path Begin       : fsm/counter__i4/Q  (SLICE_R12C13C)
 Path End         : {digits/s2__i0/SP   digits/s2__i1/SP}  (SLICE_R14C8C)
 Source Clock     : clk (R)
 Destination Clock: clk (R)
@@ -425,15 +425,15 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  48      
 digits/clk                                                   NET DELAY           5.499                  5.499  48      
-{fsm/counter__i6/CK   fsm/counter__i5/CK}
+{fsm/counter__i5/CK   fsm/counter__i4/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-fsm/counter__i5/CK->fsm/counter__i5/Q     SLICE_R12C13C      CLK_TO_Q1_DELAY     1.388                  6.887  2       
-fsm/bounceCounter[4]                                         NET DELAY           2.141                  9.028  2       
+fsm/counter__i4/CK->fsm/counter__i4/Q     SLICE_R12C13C      CLK_TO_Q1_DELAY     1.388                  6.887  2       
+fsm/counter[4]                                               NET DELAY           2.141                  9.028  2       
 fsm/i1_4_lut_adj_15/B->fsm/i1_4_lut_adj_15/Z
                                           SLICE_R13C13A      A0_TO_F0_DELAY      0.476                  9.504  1       
 fsm/n4_c                                                     NET DELAY           0.304                  9.808  1       
@@ -443,13 +443,13 @@ fsm/n387                                                     NET DELAY          
 fsm/i66_2_lut/B->fsm/i66_2_lut/Z          SLICE_R14C12A      D1_TO_F1_DELAY      0.449                 12.874  6       
 fsm/n401[0]                                                  NET DELAY           2.432                 15.306  6       
 fsm/i662_4_lut/B->fsm/i662_4_lut/Z        SLICE_R14C11B      C0_TO_F0_DELAY      0.449                 15.755  2       
-fsm/n808                                                     NET DELAY           2.168                 17.923  2       
+fsm/n800                                                     NET DELAY           2.168                 17.923  2       
 fsm/i1_4_lut/C->fsm/i1_4_lut/Z            SLICE_R14C12B      D1_TO_F1_DELAY      0.449                 18.372  2       
 fsm/n5                                                       NET DELAY           2.168                 20.540  2       
 fsm/i2_4_lut/A->fsm/i2_4_lut/Z            SLICE_R15C11B      D0_TO_F0_DELAY      0.476                 21.016  1       
 digits/en                                                    NET DELAY           0.304                 21.320  1       
 i899_3_lut/B->i899_3_lut/Z                SLICE_R15C11B      C1_TO_F1_DELAY      0.449                 21.769  4       
-digits/n1058                                                 NET DELAY           2.802                 24.571  4       
+digits/n1050                                                 NET DELAY           2.802                 24.571  4       
 {digits/s2__i0/SP   digits/s2__i1/SP}                        ENDPOINT            0.000                 24.571  1       
 
 
@@ -505,10 +505,10 @@ keypad_decode/i2_3_lut_4_lut/B->keypad_decode/i2_3_lut_4_lut/Z
 keypad_decode/n14_c                                          NET DELAY           2.763                 16.840  5       
 keypad_decode/i1949_4_lut/D->keypad_decode/i1949_4_lut/Z
                                           SLICE_R15C8C       D1_TO_F1_DELAY      0.449                 17.289  1       
-keypad_decode/n2250                                          NET DELAY           2.551                 19.840  1       
+keypad_decode/n2242                                          NET DELAY           2.551                 19.840  1       
 keypad_decode/i1959_4_lut/A->keypad_decode/i1959_4_lut/Z
                                           SLICE_R16C9B       A1_TO_F1_DELAY      0.449                 20.289  1       
-keypad_decode/n2260                                          NET DELAY           3.622                 23.911  1       
+keypad_decode/n2252                                          NET DELAY           3.622                 23.911  1       
 keypad_decode/i3_4_lut_adj_10/D->keypad_decode/i3_4_lut_adj_10/Z
                                           SLICE_R14C8C       C0_TO_F0_DELAY      0.476                 24.387  1       
 digits/key[0]                                                NET DELAY           0.000                 24.387  1       
@@ -562,7 +562,7 @@ fsm/originalButton__i1/CK->fsm/originalButton__i1/Q
                                           SLICE_R13C10C      CLK_TO_Q0_DELAY     1.388                  6.887  2       
 fsm/originalButton[1]                                        NET DELAY           2.141                  9.028  2       
 fsm/i3_4_lut/C->fsm/i3_4_lut/Z            SLICE_R13C10D      A0_TO_F0_DELAY      0.449                  9.477  1       
-fsm/n1918                                                    NET DELAY           2.551                 12.028  1       
+fsm/n1910                                                    NET DELAY           2.551                 12.028  1       
 fsm/i4_4_lut/C->fsm/i4_4_lut/Z            SLICE_R13C11B      A0_TO_F0_DELAY      0.449                 12.477  8       
 fsm/originalStillPressed                                     NET DELAY           2.168                 14.645  8       
 fsm/i1_4_lut_adj_22/B->fsm/i1_4_lut_adj_22/Z
@@ -570,9 +570,9 @@ fsm/i1_4_lut_adj_22/B->fsm/i1_4_lut_adj_22/Z
 fsm/n4_adj_136                                               NET DELAY           3.080                 18.174  3       
 fsm/i1943_2_lut_4_lut/C->fsm/i1943_2_lut_4_lut/Z
                                           SLICE_R13C12B      B1_TO_F1_DELAY      0.449                 18.623  1       
-fsm/n2244                                                    NET DELAY           2.763                 21.386  1       
+fsm/n2236                                                    NET DELAY           2.763                 21.386  1       
 i2176_4_lut/C->i2176_4_lut/Z              SLICE_R12C11B      D1_TO_F1_DELAY      0.449                 21.835  2       
-fsm/n1050                                                    NET DELAY           2.207                 24.042  2       
+fsm/n1042                                                    NET DELAY           2.207                 24.042  2       
 {fsm/originalButton__i1/SP   fsm/originalButton__i0/SP}
                                                              ENDPOINT            0.000                 24.042  1       
 
@@ -625,7 +625,7 @@ fsm/originalButton__i1/CK->fsm/originalButton__i1/Q
                                           SLICE_R13C10C      CLK_TO_Q0_DELAY     1.388                  6.887  2       
 fsm/originalButton[1]                                        NET DELAY           2.141                  9.028  2       
 fsm/i3_4_lut/C->fsm/i3_4_lut/Z            SLICE_R13C10D      A0_TO_F0_DELAY      0.449                  9.477  1       
-fsm/n1918                                                    NET DELAY           2.551                 12.028  1       
+fsm/n1910                                                    NET DELAY           2.551                 12.028  1       
 fsm/i4_4_lut/C->fsm/i4_4_lut/Z            SLICE_R13C11B      A0_TO_F0_DELAY      0.449                 12.477  8       
 fsm/originalStillPressed                                     NET DELAY           2.168                 14.645  8       
 fsm/i1_4_lut_adj_22/B->fsm/i1_4_lut_adj_22/Z
@@ -633,9 +633,9 @@ fsm/i1_4_lut_adj_22/B->fsm/i1_4_lut_adj_22/Z
 fsm/n4_adj_136                                               NET DELAY           3.080                 18.174  3       
 fsm/i1943_2_lut_4_lut/C->fsm/i1943_2_lut_4_lut/Z
                                           SLICE_R13C12B      B1_TO_F1_DELAY      0.449                 18.623  1       
-fsm/n2244                                                    NET DELAY           2.763                 21.386  1       
+fsm/n2236                                                    NET DELAY           2.763                 21.386  1       
 i2176_4_lut/C->i2176_4_lut/Z              SLICE_R12C11B      D1_TO_F1_DELAY      0.449                 21.835  2       
-fsm/n1050                                                    NET DELAY           2.207                 24.042  2       
+fsm/n1042                                                    NET DELAY           2.207                 24.042  2       
 {fsm/originalButton__i3/SP   fsm/originalButton__i2/SP}
                                                              ENDPOINT            0.000                 24.042  1       
 
@@ -694,7 +694,7 @@ keypad_decode/i3_3_lut_4_lut/A->keypad_decode/i3_3_lut_4_lut/Z
 keypad_decode/n8                                             NET DELAY           2.485                 16.298  1       
 keypad_decode/i1_4_lut/C->keypad_decode/i1_4_lut/Z
                                           SLICE_R14C9B       B0_TO_F0_DELAY      0.476                 16.774  2       
-keypad_decode/n524                                           NET DELAY           0.304                 17.078  2       
+keypad_decode/n516                                           NET DELAY           0.304                 17.078  2       
 keypad_decode/reduce_or_483_i1_3_lut/A->keypad_decode/reduce_or_483_i1_3_lut/Z
                                           SLICE_R14C9B       C1_TO_F1_DELAY      0.449                 17.527  2       
 keypad_decode/n1                                             NET DELAY           2.168                 19.695  2       
@@ -756,15 +756,15 @@ fsm/i1_4_lut_4_lut_4_lut/C->fsm/i1_4_lut_4_lut_4_lut/Z
 fsm/oneButtonPressed                                         NET DELAY           2.168                 12.835  12      
 fsm/i668_4_lut_4_lut/A->fsm/i668_4_lut_4_lut/Z
                                           SLICE_R13C13B      D0_TO_F0_DELAY      0.476                 13.311  3       
-fsm/n814                                                     NET DELAY           0.304                 13.615  3       
+fsm/n806                                                     NET DELAY           0.304                 13.615  3       
 fsm/mux_91_i9_3_lut/B->fsm/mux_91_i9_3_lut/Z
                                           SLICE_R13C13B      C1_TO_F1_DELAY      0.449                 14.064  1       
-fsm/n156[8]                                                  NET DELAY           2.551                 16.615  1       
+fsm/n148[8]                                                  NET DELAY           2.551                 16.615  1       
 fsm/i3_4_lut_adj_21/C->fsm/i3_4_lut_adj_21/Z
                                           SLICE_R14C13B      A0_TO_F0_DELAY      0.449                 17.064  1       
-fsm/n1940                                                    NET DELAY           2.763                 19.827  1       
+fsm/n1932                                                    NET DELAY           2.763                 19.827  1       
 fsm/i472_4_lut/A->fsm/i472_4_lut/Z        SLICE_R13C11D      D1_TO_F1_DELAY      0.449                 20.276  4       
-fsm/n598                                                     NET DELAY           2.168                 22.444  4       
+fsm/n590                                                     NET DELAY           2.168                 22.444  4       
 fsm/i1202_2_lut/B->fsm/i1202_2_lut/Z      SLICE_R13C10A      D0_TO_F0_DELAY      0.476                 22.920  1       
 fsm/n129[3]                                                  NET DELAY           0.000                 22.920  1       
 fsm/originalButton__i3/D                                     ENDPOINT            0.000                 22.920  1       
@@ -820,15 +820,15 @@ fsm/i1_4_lut_4_lut_4_lut/C->fsm/i1_4_lut_4_lut_4_lut/Z
 fsm/oneButtonPressed                                         NET DELAY           2.168                 12.835  12      
 fsm/i668_4_lut_4_lut/A->fsm/i668_4_lut_4_lut/Z
                                           SLICE_R13C13B      D0_TO_F0_DELAY      0.476                 13.311  3       
-fsm/n814                                                     NET DELAY           0.304                 13.615  3       
+fsm/n806                                                     NET DELAY           0.304                 13.615  3       
 fsm/mux_91_i9_3_lut/B->fsm/mux_91_i9_3_lut/Z
                                           SLICE_R13C13B      C1_TO_F1_DELAY      0.449                 14.064  1       
-fsm/n156[8]                                                  NET DELAY           2.551                 16.615  1       
+fsm/n148[8]                                                  NET DELAY           2.551                 16.615  1       
 fsm/i3_4_lut_adj_21/C->fsm/i3_4_lut_adj_21/Z
                                           SLICE_R14C13B      A0_TO_F0_DELAY      0.449                 17.064  1       
-fsm/n1940                                                    NET DELAY           2.763                 19.827  1       
+fsm/n1932                                                    NET DELAY           2.763                 19.827  1       
 fsm/i472_4_lut/A->fsm/i472_4_lut/Z        SLICE_R13C11D      D1_TO_F1_DELAY      0.449                 20.276  4       
-fsm/n598                                                     NET DELAY           2.168                 22.444  4       
+fsm/n590                                                     NET DELAY           2.168                 22.444  4       
 fsm/i1203_2_lut/B->fsm/i1203_2_lut/Z      SLICE_R13C10A      D1_TO_F1_DELAY      0.476                 22.920  1       
 fsm/n129[2]                                                  NET DELAY           0.000                 22.920  1       
 fsm/originalButton__i2/D                                     ENDPOINT            0.000                 22.920  1       
