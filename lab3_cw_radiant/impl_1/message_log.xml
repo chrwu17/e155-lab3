@@ -405,20 +405,20 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(58): </Dynamic>
+            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(62): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>19</Dynamic>
             <Navigation>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv</Navigation>
-            <Navigation>58</Navigation>
+            <Navigation>62</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(85): </Dynamic>
+            <Dynamic>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(116): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv</Navigation>
-            <Navigation>85</Navigation>
+            <Navigation>116</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -498,13 +498,6 @@
             <Severity>16</Severity>
             <Dynamic>\fsm/state_FSM_i12</Dynamic>
             <Dynamic>Zero</Dynamic>
-        </Message>
-    </Task>
-    <Task name="Export">
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

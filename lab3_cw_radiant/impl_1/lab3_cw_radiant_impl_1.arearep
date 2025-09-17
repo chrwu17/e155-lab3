@@ -1,14 +1,14 @@
 ----------------------------------------------------------------------
 Report for cell lab3_cw.TECH
-Register bits:  89 of 5280 (1.686%)
+Register bits:  105 of 5280 (1.989%)
 I/O cells:      18
                                   Cell usage:
                                cell     count   Res Usage(%)
                                CCU2        28          100.0
-                            FD1P3XZ        89          100.0
+                            FD1P3XZ       105          100.0
                          HSOSC_CORE         1          100.0
                                  IB         5          100.0
-                               LUT4       166          100.0
+                               LUT4       208          100.0
                                  OB        13          100.0
 SUB MODULES
                              keypad         1
@@ -18,57 +18,58 @@ SUB MODULES
                 sevenSegmentDisplay         1
                        synchronizer         1
                     timeMultiplexer         1
-                              TOTAL       309
+                              TOTAL       367
 ----------------------------------------------------------------------
 Report for cell timeMultiplexer.v1
 Instance Path : timeMux
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        13           46.4
-                            FD1P3XZ        28           31.5
-                               LUT4        35           21.1
+                            FD1P3XZ        28           26.7
+                               LUT4        35           16.8
                               TOTAL        76
-----------------------------------------------------------------------
-Report for cell sevenSegMux.v1
-Instance Path : segMux
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         4            2.4
-                              TOTAL         4
-----------------------------------------------------------------------
-Report for cell synchronizer.v1
-Instance Path : sync
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3XZ         8            9.0
-                              TOTAL         8
 ----------------------------------------------------------------------
 Report for cell sevenSegmentDisplay.v1
 Instance Path : segDisplay
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         7            4.2
+                               LUT4         7            3.4
                               TOTAL         7
+----------------------------------------------------------------------
+Report for cell sevenSegMux.v1
+Instance Path : segMux
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         4            1.9
+                              TOTAL         4
 ----------------------------------------------------------------------
 Report for cell keypad.v1
 Instance Path : keypad_decode
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4        27           16.3
-                              TOTAL        27
+                               LUT4        26           12.5
+                              TOTAL        26
 ----------------------------------------------------------------------
-Report for cell sevenSegDigits.v1
-Instance Path : digits
+Report for cell synchronizer.v1
+Instance Path : sync
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ         9           10.1
-                              TOTAL         9
+                            FD1P3XZ         8            7.6
+                              TOTAL         8
 ----------------------------------------------------------------------
 Report for cell keypadFSM.v1
 Instance Path : fsm
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        15           53.6
-                            FD1P3XZ        44           49.4
-                               LUT4        89           53.6
-                              TOTAL       148
+                            FD1P3XZ        60           57.1
+                               LUT4       130           62.5
+                              TOTAL       205
+----------------------------------------------------------------------
+Report for cell sevenSegDigits.v1
+Instance Path : digits
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         9            8.6
+                               LUT4         1            0.5
+                              TOTAL        10

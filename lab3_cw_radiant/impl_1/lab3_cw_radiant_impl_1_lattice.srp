@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Sep 17 01:08:27 2025
+Wed Sep 17 12:47:13 2025
 
 
 Command Line:  C:\lscc\radiant\2025.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/impl_1/lab3_cw_radiant_impl_1_lattice.synproj -logfile lab3_cw_radiant_impl_1_lattice.srp -gui -msgset C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/promote.xml 
@@ -198,8 +198,8 @@ INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-l
 INFO <35901018> - synthesis: C:/lscc/radiant/2025.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC. VERI-1018
 INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/synchronizer.sv(8): compiling module synchronizer. VERI-1018
 INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(12): compiling module keypadFSM. VERI-1018
-WARNING <35901209> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(58): expression size 32 truncated to fit in target size 19. VERI-1209
-WARNING <35901209> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(85): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING <35901209> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(62): expression size 32 truncated to fit in target size 19. VERI-1209
+WARNING <35901209> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypadfsm.sv(116): expression size 32 truncated to fit in target size 8. VERI-1209
 INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/keypad.sv(9): compiling module keypad. VERI-1018
 INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/sevensegdigits.sv(9): compiling module sevenSegDigits. VERI-1018
 INFO <35901018> - synthesis: c:/users/chris/onedrive/desktop/wu-e155-lab3/e155-lab3/fpga/src/timemultiplexer.sv(10): compiling module timeMultiplexer. VERI-1018
@@ -280,12 +280,12 @@ WARNING <35935040> - synthesis: Register \fsm/state_FSM_i13 clock is stuck at Ze
 WARNING <35935040> - synthesis: Register \fsm/state_FSM_i12 clock is stuck at Zero. VDB-5040
 
 ################### Begin Area Report (lab3_cw)######################
-Number of register bits => 89 of 5280 (1 % )
+Number of register bits => 105 of 5280 (1 % )
 CCU2 => 28
-FD1P3XZ => 89
+FD1P3XZ => 105
 HSOSC_CORE => 1
 IB => 5
-LUT4 => 166
+LUT4 => 208
 OB => 13
 ################### End Area Report ##################
 Number of odd-length carry chains : 2
@@ -299,16 +299,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : resetInv_c_N_107, loads : 59
+  Net : resetInv_c_N_123, loads : 63
   Net : timeMux/n49, loads : 36
-  Net : fsm/n588, loads : 33
-  Net : n1044, loads : 23
-  Net : n1038, loads : 22
-  Net : resetInv_c, loads : 20
-  Net : fsm/n590, loads : 20
-  Net : fsm/fsm_tick, loads : 19
-  Net : fsm/oneButtonPressed, loads : 18
-  Net : fsm/n129[1], loads : 18
+  Net : fsm/n719, loads : 33
+  Net : resetInv_c, loads : 31
+  Net : n1561, loads : 31
+  Net : fsm/oneButtonPressed, loads : 29
+  Net : n1714, loads : 28
+  Net : fsm/n374[0], loads : 23
+  Net : fsm/n374[1], loads : 23
+  Net : fsm/n374[3], loads : 23
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -317,10 +317,10 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 97 MB
+Peak Memory Usage: 99 MB
 
 --------------------------------------------------------------
 Total CPU Time: 5 secs 
 Total REAL Time: 6 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 4af8509e064b21392894a889580511126f76ac6
+Checksum -- synthesis -- netlist: 2221fefff2a01d9ad3824b4431564afe9300cea8

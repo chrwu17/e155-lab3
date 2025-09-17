@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2025.1.0.39.0
-Mapped on: Wed Sep 17 01:08:37 2025
+Mapped on: Wed Sep 17 12:47:23 2025
 
 Design Information
 ------------------
@@ -22,11 +22,11 @@ Command line:   map -pdc C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/
 Design Summary
 --------------
 
-   Number of slice registers:  89 out of  5280 (2%)
+   Number of slice registers: 105 out of  5280 (2%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           239 out of  5280 (5%)
-      Number of logic LUT4s:             167
-      Number of inserted feedthru LUT4s:  13
+   Number of LUT4s:           285 out of  5280 (5%)
+      Number of logic LUT4s:             209
+      Number of inserted feedthru LUT4s:  17
       Number of replicated LUT4s:          3
       Number of ripple logic:             28 (56 LUT4s)
    Number of IO sites used:   18 out of 39 (46%)
@@ -51,15 +51,15 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net clk: 80 loads, 80 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
-   Number of Clock Enables:  5
+      Net clk: 96 loads, 96 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+   Number of Clock Enables:  7
       Net VCC_net: 1 loads, 0 SLICEs
-      Net n1049: 8 loads, 8 SLICEs
-      Net n1044: 8 loads, 8 SLICEs
       Net timeMux.n49: 2 loads, 2 SLICEs
-      Net n1038: 4 loads, 4 SLICEs
-   Number of LSRs:  2
-      Net resetInv_c_N_107: 57 loads, 57 SLICEs
+      Net n1563: 4 loads, 4 SLICEs
+      Net n1711: 8 loads, 8 SLICEs
+      Net n1561: 8 loads, 8 SLICEs
+      Net n1714: 4 loads, 4 SLICEs
+      Net fsm.n1492: 4 loads, 4 SLICEs
 
                                     Page 1
 
@@ -69,18 +69,21 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net fsm.n588: 10 loads, 10 SLICEs
+   Number of LSRs:  3
+      Net resetInv_c_N_123: 61 loads, 61 SLICEs
+      Net fsm.n1526: 4 loads, 4 SLICEs
+      Net fsm.n719: 10 loads, 10 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net resetInv_c_N_107: 57 loads
+      Net resetInv_c_N_123: 61 loads
+      Net resetInv_c: 36 loads
       Net timeMux.n49: 28 loads
-      Net resetInv_c: 25 loads
-      Net fsm_tick: 23 loads
-      Net n387: 14 loads
-      Net fsm.oneButtonPressed: 12 loads
-      Net col_sync[0]: 11 loads
-      Net col_sync[1]: 11 loads
-      Net col_sync[2]: 11 loads
-      Net col_sync[3]: 10 loads
+      Net fsm_tick: 21 loads
+      Net fsm.buttonPressed: 16 loads
+      Net n636: 16 loads
+      Net col_sync[0]: 15 loads
+      Net col_sync[1]: 15 loads
+      Net fsm.rc_7__N_1[3]: 15 loads
+      Net col_sync[2]: 14 loads
 
 
 
@@ -124,9 +127,6 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | seg[3]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[4]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| seg[5]              | OUTPUT    |           |       |       |           |
 
                                     Page 2
 
@@ -136,6 +136,9 @@ IO (PIO) Attributes
 
 IO (PIO) Attributes (cont)
 --------------------------
+| seg[4]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[5]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | seg[6]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -180,11 +183,8 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 67 MB
-Checksum -- map: 5a290461535bd482d5b302a1fc424f28af0cbcdc
-
-
-
+   Peak Memory Usage: 69 MB
+Checksum -- map: bf77b9c4e48696e1fea3f7fe4a4c0b4f3feccb25
 
 
 
