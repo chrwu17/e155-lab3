@@ -1,6 +1,6 @@
 // Christian Wu
 // chrwu@g.hmc.edu
-// 09//13/25
+// 09/13/25
 
 // This is the top level module for Lab 3. This module will display the last two hexadecimal digits pressed
 // on the seven segment display. Simplified to use single clock with proper timing.

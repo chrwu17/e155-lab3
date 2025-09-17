@@ -1,89 +1,83 @@
-// lab3_cw_tb.sv
-// Working testbench for lab3_cw module
+// Christian Wu
+// chrwu@g.hmc.edu
+// 09/17/25
 
-`timescale 1ns / 1ps
+// Testbench for lab3_cw
 
-module lab3_cw_testbench();
+`timescale 1ns/1ps
 
-    // Testbench signals
-    logic reset;
+module lab3_cw_testbench(); 
+    logic clk;
+    logic resetInv;  
     logic [3:0] col;
     logic [3:0] row;
-    logic [6:0] seg;
     logic an1, an2;
-    logic clk_tb;
-    
-    // Generate 48MHz clock
+    logic [6:0] seg;
+
+    lab3_cw dut(.resetInv(resetInv), .col(col), .row(row), .seg(seg), .an1(an1), .an2(an2));
+
+    always begin
+        clk = 0; #10.42;  // ~48MHz clock period
+        clk = 1; #10.42;
+    end
+
     initial begin
-        clk_tb = 0;
-        forever #10.416 clk_tb = ~clk_tb;  // 48MHz = 20.833ns period
+        resetInv = 0; #100;  
+        resetInv = 1;    
     end
     
-    // Instantiate DUT with testbench clock
-    lab3_cw dut (
-        .reset(reset),
-        .col(col),
-        .row(row),
-        .seg(seg),
-        .an1(an1),
-        .an2(an2)
-    );
-    
-    // Test sequence
     initial begin
-        // Initialize
-        reset = 1;
-        col = 4'b1111; // No keys pressed
+        col = 4'b0000;
         
-        // Reset
+        wait(resetInv == 1);
+        #1_000_000;  // 1ms delay
+        
+        $display("Starting keypad test sequence...");
+        
+        // Test Key 1: Row 0 (4'b0001), Col 0 (4'b0001)
+        wait(row == 4'b0001);  
         #1000;
-        reset = 0;
-        #10000; // Let FSM start scanning
+        col = 4'b0001;
+        $display("Time %0t: Pressing key 1 - Row: %b, Col: %b", $time, row, col);
+        #60_000_000;  
+        col = 4'b0000;
+        $display("Time %0t: Released key 1", $time);
+        #10_000_000;
         
-        // Test key '5' (row=1, col=1) -> should decode to 4'b0101
-        $display("Pressing key '5'");
-        wait(row[1] == 0); // Wait for row 1 scan
-        #200;
-        col[1] = 0; // Press key
-        #100000; // Hold 100us > 50us debounce
-        col[1] = 1; // Release
-        #50000;
-        
-        // Test key '1' (row=1, col=3) -> should decode to 4'b0001  
-        $display("Pressing key '1'");
-        wait(row[1] == 0);
-        #200;
-        col[3] = 0;
-        #100000;
-        col[3] = 1;
-        #50000;
-        
-        // Test key 'A' (row=0, col=3) -> should decode to 4'b1010
-        $display("Pressing key 'A'");
-        wait(row[0] == 0);
-        #200;
-        col[3] = 0;
-        #100000;
-        col[3] = 1;
-        #50000;
-        
-        // Test reset
-        $display("Testing reset");
-        reset = 1;
+        // Test Key 2: Row 0 (4'b0001), Col 1 (4'b0010)
+        wait(row == 4'b0001);  
         #1000;
-        reset = 0;
-        #50000;
+        col = 4'b0010;
+        $display("Time %0t: Pressing key 2 - Row: %b, Col: %b", $time, row, col);
+        #60_000_000; 
+        col = 4'b0000;
+        $display("Time %0t: Released key 2", $time);
+        #10_000_000;
         
-        // Run long enough to see multiplexer
-        #2000000; // 2ms
+        // Test Key 3: Row 0 (4'b0001), Col 2 (4'b0100)
+        wait(row == 4'b0001);  
+        #1000;
+        col = 4'b0100;
+        $display("Time %0t: Pressing key 3 - Row: %b, Col: %b", $time, row, col);
+        #60_000_000;
+        col = 4'b0000;
+        $display("Time %0t: Released key 3", $time);
+        #10_000_000;
         
+        // Test Key A: Row 3 (4'b1000), Col 0 (4'b0001)
+        wait(row == 4'b1000);  
+        #1000;
+        col = 4'b0001;
+        $display("Time %0t: Pressing key A - Row: %b, Col: %b", $time, row, col);
+        #60_000_000;  
+        col = 4'b0000;
+        $display("Time %0t: Released key A", $time);
+        #10_000_000;
+        
+        #100_000_000;
+        
+        $display("Tests completed");
         $finish;
-    end
-    
-    // Monitor
-    initial begin
-        $monitor("Time=%t: reset=%b, row=%b, col=%b, seg=%b, an1=%b, an2=%b", 
-                 $time, reset, row, col, seg, an1, an2);
     end
 
 endmodule

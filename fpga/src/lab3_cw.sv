@@ -1,6 +1,6 @@
 // Christian Wu
 // chrwu@g.hmc.edu
-// 09//13/25
+// 09/13/25
 
 // This is the top level module for Lab 3. This module will display the last two hexadecimal digits pressed
 // on the seven segment display. Simplified to use single clock with proper timing.
@@ -23,7 +23,7 @@ module lab3_cw (
     logic [3:0] current_seg;       
     
     assign reset = ~resetInv;
-    
+
     HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
     synchronizer sync (.clk(clk), .reset(reset), .in(col), .out(col_sync));
     keypadFSM fsm (.clk(clk), .reset(reset), .col(col_sync), .row(row), .rc(rc), .en(en));

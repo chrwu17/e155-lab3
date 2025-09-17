@@ -7,13 +7,19 @@
 
 module synchronizer (
     input logic clk,
+    input logic reset,
     input logic [3:0] in,
     output logic [3:0] out);
 
     logic [3:0] mid;
 
-    always_ff @(posedge clk) begin
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            mid <= 4'b0000;
+            out <= 4'b0000;
+        end else begin
         mid <= in;
         out <= mid;
+    end
     end
 endmodule

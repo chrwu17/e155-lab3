@@ -40,15 +40,6 @@ Report for cell synchronizer
                                   cell	      count    Res Usage(%)
                                 PFUREG	          8         9.0
 ---------------------------------------------------
-Report for cell keypadFSM
-   Instance path: lab3_cw/fsm
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	        118        49.4
-                               LUTGATE	         88        48.1
-                                LUTCCU	         30        53.6
-                                PFUREG	         44        49.4
----------------------------------------------------
 Report for cell sevenSegmentDisplay
    Instance path: lab3_cw/segDisplay
                      Cell usage:
@@ -68,3 +59,12 @@ Report for cell sevenSegDigits
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                 PFUREG	          9        10.1
+---------------------------------------------------
+Report for cell keypadFSM
+   Instance path: lab3_cw/fsm
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        118        49.4
+                               LUTGATE	         88        48.1
+                                LUTCCU	         30        53.6
+                                PFUREG	         44        49.4

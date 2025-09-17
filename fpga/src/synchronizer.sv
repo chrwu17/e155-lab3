@@ -13,7 +13,7 @@ module synchronizer (
 
     logic [3:0] mid;
 
-    always_ff @(posedge clk) begin
+    always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             mid <= 4'b0000;
             out <= 4'b0000;

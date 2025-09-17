@@ -43,15 +43,6 @@ Instance Path : sync
                             FD1P3XZ         8            9.0
                               TOTAL         8
 ----------------------------------------------------------------------
-Report for cell keypadFSM.v1
-Instance Path : fsm
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                                FA2        15           53.6
-                            FD1P3XZ        44           49.4
-                               LUT4        89           53.6
-                              TOTAL       148
-----------------------------------------------------------------------
 Report for cell sevenSegmentDisplay.v1
 Instance Path : segDisplay
                                   Cell usage:
@@ -72,3 +63,12 @@ Instance Path : digits
                                cell     count   Res Usage(%)
                             FD1P3XZ         9           10.1
                               TOTAL         9
+----------------------------------------------------------------------
+Report for cell keypadFSM.v1
+Instance Path : fsm
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        15           53.6
+                            FD1P3XZ        44           49.4
+                               LUT4        89           53.6
+                              TOTAL       148

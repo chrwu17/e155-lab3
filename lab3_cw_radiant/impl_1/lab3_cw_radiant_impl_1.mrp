@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2025.1.0.39.0
-Mapped on: Tue Sep 16 23:52:42 2025
+Mapped on: Wed Sep 17 01:08:37 2025
 
 Design Information
 ------------------
@@ -54,12 +54,12 @@ Design Summary
       Net clk: 80 loads, 80 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
    Number of Clock Enables:  5
       Net VCC_net: 1 loads, 0 SLICEs
-      Net n1052: 8 loads, 8 SLICEs
-      Net n1042: 4 loads, 4 SLICEs
+      Net n1049: 8 loads, 8 SLICEs
+      Net n1044: 8 loads, 8 SLICEs
       Net timeMux.n49: 2 loads, 2 SLICEs
-      Net n1050: 8 loads, 8 SLICEs
+      Net n1038: 4 loads, 4 SLICEs
    Number of LSRs:  2
-      Net resetInv_c_N_115: 57 loads, 57 SLICEs
+      Net resetInv_c_N_107: 57 loads, 57 SLICEs
 
                                     Page 1
 
@@ -71,14 +71,14 @@ Design Summary (cont)
 ---------------------
       Net fsm.n588: 10 loads, 10 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net resetInv_c_N_115: 57 loads
+      Net resetInv_c_N_107: 57 loads
       Net timeMux.n49: 28 loads
-      Net resetInv_c: 24 loads
+      Net resetInv_c: 25 loads
       Net fsm_tick: 23 loads
       Net n387: 14 loads
-      Net col_sync[0]: 12 loads
-      Net col_sync[1]: 12 loads
       Net fsm.oneButtonPressed: 12 loads
+      Net col_sync[0]: 11 loads
+      Net col_sync[1]: 11 loads
       Net col_sync[2]: 11 loads
       Net col_sync[3]: 10 loads
 
@@ -180,8 +180,8 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 68 MB
-Checksum -- map: 38f9699fa35c6f9d15c1116dacf90f5cadecc6e5
+   Peak Memory Usage: 67 MB
+Checksum -- map: 5a290461535bd482d5b302a1fc424f28af0cbcdc
 
 
 
