@@ -18,10 +18,8 @@ module keypadFSM (
     output logic en, 
     output logic [7:0] counter
 );
-
-    // State encoding - 12 states (removing WAIT states, using 100Hz)
     typedef enum logic [3:0] {
-        S0 = 0,   // Row0 scan
+        S0,       // Row0 scan
         S1,       // Row1 scan
         S2,       // Row2 scan
         S3,       // Row3 scan
@@ -39,16 +37,14 @@ module keypadFSM (
     logic [3:0] activeCol;
     logic buttonPressed, oneButtonPressed;
     logic [3:0] rowPressed;
-    logic [3:0] originalButton;  // Store the original button that was pressed
-    logic originalStillPressed;  // Check if original button is still pressed
+    logic [3:0] originalButton; 
+    logic originalStillPressed; 
 
-    // 1kHz FSM tick generator (48MHz / 48,000 = 1kHz)
     logic [18:0] fsm_counter;
     logic fsm_tick;
 
-    // Parameters - Speed up for testing
-    parameter FSM_TICK_COUNT = 19'd48_000;    // 1kHz FSM operation (faster)
-    parameter DEBOUNCE_COUNT = 8'd50;         // 50 ticks = 50ms debounce
+    parameter FSM_TICK_COUNT = 19'd48_000;    
+    parameter DEBOUNCE_COUNT = 8'd50;        
 
     // 1kHz tick generator for FSM state transitions
     always_ff @(posedge clk) begin
@@ -66,7 +62,6 @@ module keypadFSM (
         end
     end
 
-    // FSM sequential - only advance on 100Hz tick
     always_ff @(posedge clk) begin
         if (reset) begin
             state <= S0;
@@ -97,7 +92,6 @@ module keypadFSM (
         end
     end
 
-    // Row drive - ACTIVE HIGH (original behavior)
     always_comb begin
         case (state)
             S0, S4, S5:     row = 4'b0001; // Row0 active
@@ -108,7 +102,6 @@ module keypadFSM (
         endcase
     end
 
-    // Active column detection (row-qualified) - same as original
     assign activeCol = col & {4{row[0] | row[1] | row[2] | row[3]}};
 
     assign buttonPressed    = |activeCol;
@@ -119,13 +112,11 @@ module keypadFSM (
     assign originalStillPressed = (originalButton != 4'b0000) && 
                                   ((activeCol & originalButton) == originalButton);
 
-    // Row pressed flags - indicate which row is currently active
     assign rowPressed[0] = (state inside {S0, S4, S5});
     assign rowPressed[1] = (state inside {S1, S6, S7});
     assign rowPressed[2] = (state inside {S2, S8, S9});
     assign rowPressed[3] = (state inside {S3, S10, S11});
 
-    // Enable pulse on debounceâ†'hold transition
     assign en = fsm_tick && (
                 (nextState == S5 && state == S4) ||
                 (nextState == S7 && state == S6) ||
@@ -142,31 +133,25 @@ module keypadFSM (
             S2:  nextState = buttonPressed && oneButtonPressed ? S8 : S3;
             S3:  nextState = buttonPressed && oneButtonPressed ? S10 : S0;
 
-            // Row0 debounce and hold - FIXED: Check original button in hold state
             S4:  nextState = (!buttonPressed || !oneButtonPressed) ? S1 :
                             (counter >= DEBOUNCE_COUNT ? S5 : S4);
-            S5:  nextState = !originalStillPressed ? S1 : S5;  // Exit when original button released
+            S5:  nextState = !originalStillPressed ? S1 : S5; 
 
-            // Row1 debounce and hold - FIXED: Check original button in hold state
             S6:  nextState = (!buttonPressed || !oneButtonPressed) ? S2 :
                             (counter >= DEBOUNCE_COUNT ? S7 : S6);
-            S7:  nextState = !originalStillPressed ? S2 : S7;  // Exit when original button released
+            S7:  nextState = !originalStillPressed ? S2 : S7; 
 
-            // Row2 debounce and hold - FIXED: Check original button in hold state
             S8:  nextState = (!buttonPressed || !oneButtonPressed) ? S3 :
                             (counter >= DEBOUNCE_COUNT ? S9 : S8);
-            S9:  nextState = !originalStillPressed ? S3 : S9;  // Exit when original button released
+            S9:  nextState = !originalStillPressed ? S3 : S9; 
 
-            // Row3 debounce and hold - FIXED: Check original button in hold state
             S10: nextState = (!buttonPressed || !oneButtonPressed) ? S0 :
                             (counter >= DEBOUNCE_COUNT ? S11 : S10);
-            S11: nextState = !originalStillPressed ? S0 : S11; // Exit when original button released
+            S11: nextState = !originalStillPressed ? S0 : S11;
 
             default: nextState = S0;
         endcase
     end
 
-    // Output combined row/col info
     assign rc = {rowPressed, col};
-
 endmodule

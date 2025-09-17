@@ -14,13 +14,11 @@ module lab3_cw (
 
     logic clk;          // Main clock (48 MHz)
     logic reset;        // Proper reset signal
-    logic por_reset;    // Power-on reset
-    logic system_reset; // Combined reset
     
     // Clock generation - 48 MHz internal oscillator
     HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
     
-    assign reset = ~resetInv; // Invert reset signal (active high)
+    assign reset = ~resetInv;
 
     // Internal signals
     logic [7:0] rc;
@@ -40,5 +38,4 @@ module lab3_cw (
     timeMultiplexer timeMux (.clk(clk), .reset(reset), .an1(an1), .an2(an2), .signal(signal));
     sevenSegMux segMux (.s1(s1), .s2(s2), .enable(signal), .out(current_seg));
     sevenSegmentDisplay segDisplay (.s(current_seg), .seg(seg));
-
 endmodule
