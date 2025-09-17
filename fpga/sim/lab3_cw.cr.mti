@@ -1,0 +1,106 @@
+C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/keypad.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/keypad.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module keypad
+
+Top level modules:
+	keypad
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/timeMultiplexer.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/timeMultiplexer.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module timeMultiplexer
+
+Top level modules:
+	timeMultiplexer
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegMux.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegMux.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module sevenSegMux
+
+Top level modules:
+	sevenSegMux
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegmentDisplay.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegmentDisplay.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module sevenSegmentDisplay
+
+Top level modules:
+	sevenSegmentDisplay
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/keypadFSM.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/keypadFSM.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module keypadFSM
+
+Top level modules:
+	keypadFSM
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegDigits.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegDigits.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module sevenSegDigits
+
+Top level modules:
+	sevenSegDigits
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/keypad_testbench.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/keypad_testbench.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module keypad_testbench
+
+Top level modules:
+	keypad_testbench
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/synchronizer.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/synchronizer.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module synchronizer
+
+Top level modules:
+	synchronizer
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/timeMultiplexer_testbench.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/timeMultiplexer_testbench.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module synchronizer_testbench
+
+Top level modules:
+	synchronizer_testbench
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegMux_testbench.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegMux_testbench.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module sevenSegMux_testbench
+
+Top level modules:
+	sevenSegMux_testbench
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegmentDisplay_testbench.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegmentDisplay_testbench.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module sevenSegmentDisplay_testbench
+
+Top level modules:
+	sevenSegmentDisplay_testbench
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/lab3_cw.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/lab3_cw.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module lab3_cw
+
+Top level modules:
+	lab3_cw
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/keypadFSM_testbench.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/keypadFSM_testbench.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module keypadFSM_testbench
+
+Top level modules:
+	keypadFSM_testbench
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegDigits_testbench.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/sevenSegDigits_testbench.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module sevenSegDigits_testbench
+
+Top level modules:
+	sevenSegDigits_testbench
+
+} {} {}} C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/synchronizer_testbench.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/sim/synchronizer_testbench.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module synchronizer_testbench
+
+Top level modules:
+	synchronizer_testbench
+
+} {} {}}

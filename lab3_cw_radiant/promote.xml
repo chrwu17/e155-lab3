@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userSetting name="C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/promote.xml" version="Diamond (64-bit) 2025.1.0.39.0" date="Tue Sep 16 18:03:19 2025" vendor="Lattice Semiconductor Corporation" >
+  <msg mid="2043063" type="Warning" internal="true" />
+  <msg mid="2043318" type="Warning" internal="true" />
+  <msg mid="35901328" type="Info" internal="true" />
+  <msg mid="35921504" type="Info" internal="true" />
+  <msg mid="2043330" type="Warning" internal="true" />
+  <msg mid="35901209" type="Warning" internal="true" />
+  <msg mid="2043204" type="Warning" internal="true" />
+  <msg mid="2043072" type="Error" internal="true" />
+  <msg mid="2043018" type="Info" internal="true" />
+  <msg mid="2043706" type="Warning" internal="true" />
+  <msg mid="2043328" type="Info" internal="true" />
+  <msg mid="2043972" type="Info" internal="true" />
+  <msg mid="35901172" type="Error" internal="true" />
+  <msg mid="2043116" type="Error" internal="true" />
+  <msg mid="2043927" type="Warning" internal="true" />
+  <msg mid="2044561" type="Info" internal="true" />
+  <msg mid="35901010" type="Error" internal="true" />
+  <msg mid="2043120" type="Error" internal="true" />
+  <msg mid="2043162" type="Error" internal="true" />
+  <msg mid="35931002" type="Warning" internal="true" />
+  <msg mid="35901162" type="Error" internal="true" />
+  <msg mid="2043206" type="Warning" internal="true" />
+  <msg mid="2044320" type="Info" internal="true" />
+  <msg mid="2043010" type="Error" internal="true" />
+  <msg mid="2043310" type="Info" internal="true" />
+  <msg mid="2043924" type="Warning" internal="true" />
+  <msg mid="2043971" type="Warning" internal="true" />
+  <msg mid="2043967" type="Info" internal="true" />
+  <msg mid="2044522" type="Warning" internal="true" />
+  <msg mid="2043137" type="Error" internal="true" />
+  <msg mid="2044344" type="Error" internal="true" />
+  <msg mid="2043281" type="Error" internal="true" />
+  <msg mid="2043128" type="Error" internal="true" />
+  <msg mid="2043187" type="Error" internal="true" />
+  <msg mid="2043372" type="Warning" internal="true" />
+  <msg mid="2044523" type="Error" internal="true" />
+  <msg mid="2044170" type="Warning" internal="true" />
+  <msg mid="2043329" type="Warning" internal="true" />
+  <msg mid="2044435" type="Warning" internal="true" />
+  <msg mid="2043214" type="Error" internal="true" />
+  <msg mid="2044142" type="Info" internal="true" />
+</userSetting>

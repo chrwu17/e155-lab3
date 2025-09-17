@@ -1,0 +1,35 @@
+#Start recording tcl command: 9/13/2025 21:58:21
+#Project Location: C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant; Project name: lab3_cw_radiant
+prj_create -name "lab3_cw_radiant" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+file copy -force -- "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/debouncer.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/keypad.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/keypadFSM.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/lab3_cw.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/sevenSegDigits.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1"
+file copy -force -- "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/sevenSegmentDisplay.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/synchronizer.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/timeMultiplexer.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1"
+prj_add_source "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/debouncer.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/keypad.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/keypadFSM.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/lab3_cw.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/sevenSegDigits.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/sevenSegmentDisplay.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/synchronizer.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/timeMultiplexer.sv"
+prj_save 
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_remove_source "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/debouncer.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/keypad.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/keypadFSM.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/lab3_cw.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/sevenSegDigits.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/sevenSegmentDisplay.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/synchronizer.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/source/impl_1/timeMultiplexer.sv"
+prj_add_source "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/debouncer.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/keypad.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/keypadFSM.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/lab3_cw.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/sevenSegDigits.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/sevenSegmentDisplay.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/synchronizer.sv" "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/timeMultiplexer.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/fpga/src/sevenSegMux.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/lab3_cw_pinAssignments.pdc"
+prj_enable_source "C:/Users/chris/OneDrive/Desktop/Wu-E155-Lab3/e155-lab3/lab3_cw_radiant/lab3_cw_pinAssignments.pdc"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/13/2025 23:05:57

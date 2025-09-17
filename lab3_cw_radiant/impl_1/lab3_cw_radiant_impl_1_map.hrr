@@ -1,0 +1,70 @@
+---------------------------------------------------
+Report for cell lab3_cw
+   Instance path: lab3_cw
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        239        100.0
+                               LUTGATE	        183        100.0
+                                LUTCCU	         56        100.0
+                                 IOBUF	         18        100.0
+                                PFUREG	         89        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                                keypad	          1        10.9
+                             keypadFSM	          1        49.4
+                        sevenSegDigits	          1         0.0
+                           sevenSegMux	          1         1.7
+                   sevenSegmentDisplay	          1         2.9
+                          synchronizer	          1         0.0
+                       timeMultiplexer	          1        25.5
+---------------------------------------------------
+Report for cell timeMultiplexer
+   Instance path: lab3_cw/timeMux
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         61        25.5
+                               LUTGATE	         35        19.1
+                                LUTCCU	         26        46.4
+                                PFUREG	         28        31.5
+---------------------------------------------------
+Report for cell sevenSegMux
+   Instance path: lab3_cw/segMux
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         1.7
+                               LUTGATE	          4         2.2
+---------------------------------------------------
+Report for cell synchronizer
+   Instance path: lab3_cw/sync
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          8         9.0
+---------------------------------------------------
+Report for cell keypadFSM
+   Instance path: lab3_cw/fsm
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        118        49.4
+                               LUTGATE	         88        48.1
+                                LUTCCU	         30        53.6
+                                PFUREG	         44        49.4
+---------------------------------------------------
+Report for cell sevenSegmentDisplay
+   Instance path: lab3_cw/segDisplay
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         2.9
+                               LUTGATE	          7         3.8
+---------------------------------------------------
+Report for cell keypad
+   Instance path: lab3_cw/keypad_decode
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         26        10.9
+                               LUTGATE	         26        14.2
+---------------------------------------------------
+Report for cell sevenSegDigits
+   Instance path: lab3_cw/digits
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          9        10.1
