@@ -1,9 +1,13 @@
 // Christian Wu
 // chrwu@g.hmc.edu
 // 09/15/25
-//
-// 4x4 Keypad FSM with 100Hz operation - Active HIGH row scanning
-// SIMPLE FIX: Remove oneButtonPressed check from debounce states
+
+// This module implements a finite state machine (FSM) to scan a 4x4 keypad.
+// It drives the rows and reads the columns to detect key presses, with
+// debouncing and single key press detection. The FSM operates at 1kHz,
+// with a debounce period of 50ms. The design ensures that only one key
+// press is registered at a time, and it waits for the key to be released
+// before allowing another key press to be detected.
 
 module keypadFSM (
     input  logic clk,

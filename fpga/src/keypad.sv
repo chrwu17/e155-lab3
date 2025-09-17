@@ -5,7 +5,6 @@
 // This module takes in a combination of row and column inputs from the keypad,
 // and outputs a 4-bit binary representation of the key pressed. If no key is pressed,
 // the output is 4'b1111.
-// Modified to work with active-high row scanning to match Max's approach.
 
 module keypad (
     input  logic [3:0] row,

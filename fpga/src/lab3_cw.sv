@@ -4,7 +4,6 @@
 
 // This is the top level module for Lab 3. This module will display the last two hexadecimal digits pressed
 // on the seven segment display. Simplified to use single clock with proper timing.
-// FIXED: Added power-on reset to handle clock startup issues
 
 module lab3_cw (
     input logic resetInv, 
